@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<ul id="messagesList">
+
+</ul>
+
+@section Scripts{
+    <script src="~/js/signalr.min.js"></script>
+
+    <script>
+
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/plc-connection") // Adjust the URL and port if needed
+            .build();
+
+        // Listen for "ReceiveData" events coming from the server.
+        connection.on("OnConnectionStatusChanged", (ipAddr, status) => {
+            console.log(`Ip Address: ${ipAddr}, Connection Status: ${status}`);
+            const li = document.createElement("li");
+            li.textContent = `Ip Address: ${ipAddr}, Connection Status: ${status}`;
+            document.getElementById("messagesList").appendChild(li);
+        });
+
+        connection.on("OnValueChanged", (ipAddr, variable, value) => {
+            console.log(`Ip Address: ${ipAddr}, Variable: ${variable}, Value: ${value}`);
+            const li = document.createElement("li");
+            li.textContent = `Ip Address: ${ipAddr}, Variable: ${variable}, Value: ${value}`;
+            document.getElementById("messagesList").appendChild(li);
+        });
+
+        connection.on("OnError", (ipAddr, variable, error) => {
+            console.log(`Ip Address: ${ipAddr}, Variable: ${variable}, Error Message: ${value}`);
+            const li = document.createElement("li");
+            li.textContent = `Ip Address: ${ipAddr}, Variable: ${variable}, Error Message: ${value}`;
+            document.getElementById("messagesList").appendChild(li);
+        });
+
+        connection.start().catch(err => console.error(err));
+    </script>
+}
+
