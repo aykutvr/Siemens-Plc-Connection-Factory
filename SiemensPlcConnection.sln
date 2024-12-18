@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens Plc Connection Interface", "Siemens Plc Connection Interface\Siemens Plc Connection Interface.csproj", "{77AFA2F4-84FF-4B10-958C-12E7CDF93DA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siemens Plc Connection Interface", "Siemens Plc Connection Interface\Siemens Plc Connection Interface.csproj", "{77AFA2F4-84FF-4B10-958C-12E7CDF93DA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net Framework Example", "Net Framework Example\Net Framework Example.csproj", "{24459DD6-D975-45B5-BD89-505F87DEE5B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet Core SignalR Example", "AspNet Core SignalR Example\AspNet Core SignalR Example.csproj", "{BE7E7910-2E39-4C5A-890A-8F7ED2F3D721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNet Core SignalR Example", "AspNet Core SignalR Example\AspNet Core SignalR Example.csproj", "{BE7E7910-2E39-4C5A-890A-8F7ED2F3D721}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net Core Example", "Net Core Example\Net Core Example.csproj", "{FE7BCC60-EF18-4472-81CB-23A6AFBED9A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net Core Example", "Net Core Example\Net Core Example.csproj", "{FE7BCC60-EF18-4472-81CB-23A6AFBED9A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38EA6DB8-FDC0-4B8B-8072-22673D1C77AE}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\aykut.vuruskaner\Downloads\README.md = C:\Users\aykut.vuruskaner\Downloads\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
