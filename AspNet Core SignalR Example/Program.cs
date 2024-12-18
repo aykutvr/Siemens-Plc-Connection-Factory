@@ -12,7 +12,6 @@ builder.Services.AddSignalR();
 
 builder.Services.AddSingleton<IPlcConnectionFactory, PlcConnectionFactory>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
